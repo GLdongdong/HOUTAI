@@ -27,4 +27,15 @@ public class UserController {
 		
 		return result;
 	}
+	@RequestMapping("/login")
+	public JSONObject login(@RequestBody SysUser user) {
+		JSONObject result = new JSONObject();
+		
+		
+		//调用Service层
+		int i =userService.login(user);
+		result.put("state", i);
+		
+		return result;
+	}
 }
