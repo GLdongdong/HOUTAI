@@ -9,4 +9,7 @@ import com.swjtuhc.demo.model.Game;
 @Mapper
 public interface GameMapper {
    public List<Game> selectAllGames();
+ 
+   public int insertGame(Game game);
 }
+

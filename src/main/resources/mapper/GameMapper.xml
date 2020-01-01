@@ -14,6 +14,12 @@
 select * from games
 
 </select>
+<insert id ="insertGame" parameterType="com.swjtuhc.demo.model.Game">
 
-
+insert into games
+(gamename,download_address,summary,picture,strategy,video)
+values
+(#{gameName},#{address},#{summary},#{poster},#{skill},#{video})
+</insert>
+  
 </mapper>

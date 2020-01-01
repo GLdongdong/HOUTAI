@@ -8,6 +8,6 @@ import com.swjtuhc.demo.model.SysUser;
 
 public interface UserMapper {
 	public SysUser selectUserByUsername(String username);
-	public SysUser selectUserByPassword(String username,String password);
+	public SysUser selectUserByPass(String username,String password);
     public int insertUser(SysUser user);
 }

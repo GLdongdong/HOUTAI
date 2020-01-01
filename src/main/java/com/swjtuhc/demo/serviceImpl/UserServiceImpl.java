@@ -36,14 +36,14 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		
 		//调用mapper登录
-SysUser u1=userMapper.selectUserByPassword(user.getUsername(),user.getPassword());
-		int i = 1;
-		if (u1!=null) {
-			i=userMapper.insertUser(user);   
+SysUser u1=userMapper.selectUserByPass(user.getUsername(),user.getPassword());
+		int a = 2;
+		if (u1==null) {
+			a=userMapper.insertUser(user);   
 		}else {
-			i=2;
+			a=1;
 		}
-		return i;
+		return a;
 	}
 
 }
