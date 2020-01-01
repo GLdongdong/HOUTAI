@@ -1,8 +1,19 @@
 package com.swjtuhc.demo.controller;
 
+
+
+
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.swjtuhc.demo.model.SysUser;
@@ -15,6 +26,9 @@ import net.sf.json.JSONObject;
 public class UserController {
     @Autowired
     UserService userService;
+    
+  
+
     
 	@RequestMapping("/register")
 	public JSONObject register(@RequestBody SysUser user) {
@@ -38,4 +52,6 @@ public class UserController {
 		
 		return result;
 	}
+
+
 }

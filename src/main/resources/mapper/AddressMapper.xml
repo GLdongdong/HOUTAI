@@ -4,8 +4,10 @@
   <resultMap type="com.swjtuhc.demo.model.Address" id="address_result">
   <id column="address_id" property="aId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
   <result column="address" property="address" javaType="java.lang.String" jdbcType="VARCHAR"/>
+  <result column="gamename" property="gamename" javaType="java.lang.String" jdbcType="VARCHAR"/>
   </resultMap>
   <select id="selectAddress" resultMap="address_result">
  select * from address
+ where gamename ='英雄联盟' 
   </select>
 </mapper>

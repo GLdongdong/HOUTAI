@@ -2,7 +2,16 @@ package com.swjtuhc.demo.model;
 
 public class Address {
 	private int aId;
-	 public int getaId() {
+	private String gamename;
+	 public String getGamename() {
+		return gamename;
+	}
+
+	public void setGamename(String gamename) {
+		this.gamename = gamename;
+	}
+
+	public int getaId() {
 		return aId;
 	}
 
@@ -22,8 +31,10 @@ public class Address {
 
 	@Override
 	public String toString() {
-		return "Address [aId=" + aId + ", address=" + address + "]";
+		return "Address [aId=" + aId + ", gamename=" + gamename + ", address=" + address + "]";
 	}
+
+	
 
 	
 }

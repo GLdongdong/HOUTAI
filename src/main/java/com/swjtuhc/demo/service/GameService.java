@@ -7,7 +7,10 @@ import com.swjtuhc.demo.model.Game;
 
 public interface GameService {
     public List<Game> getGameList();
+    
     public int createGame(Game game,InputStream fileStream);
+	
+	
    
    
 }

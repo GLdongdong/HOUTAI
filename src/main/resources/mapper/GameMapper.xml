@@ -14,12 +14,31 @@
 select * from games
 
 </select>
-<insert id ="insertGame" parameterType="com.swjtuhc.demo.model.Game">
+ <select id="findGameByName" resultMap="game_result">
+        SELECT * FROM games where gamename=#{gamename}
+ </select>
+    
+
+    
+<insert id ="insertGame" parameterType="com.swjtuhc.demo.model.Game" keyProperty="" useGeneratedKeys="true">
 
 insert into games
-(gamename,download_address,summary,picture,strategy,video)
+(g_id,gamename,download_address,summary,picture,strategy,video)
 values
-(#{gameName},#{address},#{summary},#{poster},#{skill},#{video})
+(#{gId},#{gameName},#{address},#{summary},#{poster},#{skill},#{video})
 </insert>
+
+
+  <delete id="delete" parameterType="int">
+        delete from games where g_id=#{gId}
+  </delete>
   
+  <update id="Update" parameterType="com.swjtuhc.demo.model.Game">
+    update user set games.gamename=#{gameName},games.download_address=#{address},games.summary=#{summary} games.strategy=#{strategy} 
+    games.picture=#{poster}  games.video=#{video}
+    
+    where games.g_id=#{gId}
+  </update>
+
+    
 </mapper>
