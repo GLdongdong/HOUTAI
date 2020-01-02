@@ -82,6 +82,7 @@ public class GameController {
 	    {
 	        return gamesservice.insertGame(gamename);
 	        }
+	    
 	
 	
 }
