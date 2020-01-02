@@ -8,6 +8,6 @@
   </resultMap>
   <select id="selectAddress" resultMap="address_result">
  select * from address
- where gamename ='英雄联盟' 
+ 
   </select>
 </mapper>
